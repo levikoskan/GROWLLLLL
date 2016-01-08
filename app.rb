@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require_relative 'user'
 
 
 enable :sessions
@@ -20,8 +19,11 @@ get '/home' do
   @feed = session[:growl]
   @user = params[:fname].capitalize!
   @fname = params[:lname].upcase!
+
   erb :index
+
 end
+
 
 get '/error' do
   erb :error

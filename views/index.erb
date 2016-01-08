@@ -1,6 +1,6 @@
 <h1>Hello</h1>
 
-<p>Welcome, <%= @user %> "the animal" <%=@fname%>!</p>
+<p>Welcome, <%= @user %> "the animal" <%= @fname %>!</p>
 
 
 
@@ -12,6 +12,8 @@
 
   <% @feed.each do |item|%>
     <div><%= item %></div>
+
+   <% end %>
 
 
 
