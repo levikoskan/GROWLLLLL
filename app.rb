@@ -12,26 +12,28 @@ end
 # Routes
 get '/' do
   @feed = session[:growl]
-	erb :index
+  erb :index
 
 
 end
 
-get '/growl' do
-#   @feed = session[:growl]
-#   erb :growl
-
+get '/error' do
+  erb :error
 end
 
-get '/add' do
-  erb :add
+post '/' do
+  @item = params[:human_growl]
+  @feed_length = @item.split("")
 
-end
+  if @feed_length.length > 141 || @feed_length.empty? || @feed_length[0] == " "
+      redirect '/error'
+  else
 
-post '/add' do
-  item = params[:human_growl]
-  session[:growl].push item
-
+  session[:growl].push @item
   redirect '/'
+  end
+
 
 end
+
+
