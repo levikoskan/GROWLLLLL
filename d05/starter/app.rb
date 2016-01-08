@@ -28,9 +28,12 @@ get '/add' do
 
 end
 
+if  <%= text_field_tag 'create text', nil, :maxlength => 142, :size => 40 %> do
+
 post '/add' do
   item = params[:human_growl]
   session[:growl].push item
+
 
   redirect '/'
 
