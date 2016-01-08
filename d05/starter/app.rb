@@ -11,15 +11,15 @@ end
 
 # Routes
 get '/' do
-
+  @feed = session[:growl]
 	erb :index
 
 
 end
 
 get '/growl' do
-  @feed = session[:growl]
-  erb :growl
+#   @feed = session[:growl]
+#   erb :growl
 
 end
 
