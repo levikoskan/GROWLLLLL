@@ -1,27 +1,34 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require_relative 'user'
+
 
 enable :sessions #can't use sessions without this
 
 
 before do
   session[:growl] ||= []
-
 end
 
 # Routes
 get '/' do
+  erb :loggin
+end
+
+
+get '/home' do
   @feed = session[:growl]
+  @user = params[:fname].capitalize!
+  @fname = params[:lname].upcase!
   erb :index
-
-
 end
 
 get '/error' do
   erb :error
 end
 
-post '/' do
+
+post '/home' do
   @item = params[:human_growl]
   @feed_length = @item.split("")
 
@@ -30,7 +37,7 @@ post '/' do
   else
 
   session[:growl].push @item
-  redirect '/'
+  redirect '/home'
   end
 
 

@@ -1,28 +1,28 @@
 <h1>Hello</h1>
 
-<p> Welcome to Growl </p>
+<p>Welcome, <%= @user %> "the animal" <%=@fname%>!</p>
 <br>
 
 <h3>This is your feed</h3>
 
 
-<ul>
+
   <% @feed.each do |item|%>
-    <li><%= item %></li>
+    <div><%= item %></div>
   <%end%>
-</ul>
+
 
 
 <br>
 
 
 
-<form action="/" method="post">
+<form action="/home" method="post">
 
 
   <input type="text" name="human_growl">
 
-  <input type="submit" name="Make a Growlll">
+  <input type="submit" type="button" value="MAKE SOME NOISE" name="Make a Growlll">
 
 
 </form>
