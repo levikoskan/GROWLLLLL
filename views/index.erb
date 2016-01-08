@@ -1,16 +1,16 @@
 <h1>Hello</h1>
 
-<p> Welcome to Growl </p>
+<p> Welcome to Growl! </p>
 <br>
 
-<h3>This is your feed</h3>
+<h3>Share something great ...</h3>
 
 
-<ul>
+
   <% @feed.each do |item|%>
-    <li><%= item %></li>
+    <div class=center-block><%= item %></div>
   <%end%>
-</ul>
+
 
 
 <br>
@@ -22,7 +22,7 @@
 
   <input type="text" name="human_growl">
 
-  <input type="submit" name="Make a Growlll">
+  <input type="submit" name="Make a Growl" value="growl!">
 
 
 </form>

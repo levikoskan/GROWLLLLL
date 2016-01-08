@@ -1,0 +1,51 @@
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+p {
+  font-size: 35px;
+  font-family: "veranda", sans-serif;
+  color: white;
+  margin: 0 5% 0 5%;
+}
+
+h3 {
+  font-size: 25px;
+  font-family: "veranda", sans-serif;
+  color: white;
+  margin: 15px
+}
+
+div {
+
+  font-size: 20px;
+  font-family: "veranda", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 300px;
+  border: 3px;
+  border-style: solid;
+  border-color: #0C5F7A;
+  color: white;
+
+}
+  a, a:hover {
+    color: red;
+    font-size: 15px;
+    font-family: "veranda", sans-serif;
+}
+
+a {
+  color: green;
+
+}
+
+img {
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
