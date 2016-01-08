@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require_relative 'user'
 
 
-enable :sessions #can't use sessions without this
+enable :sessions
 
 
 before do
